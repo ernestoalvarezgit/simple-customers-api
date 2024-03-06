@@ -1,7 +1,7 @@
 # Ernesto Alvarez RESTFUL API 
 A RESTful API for customers transactions
 
-It is a just simple showcase of API Knowledge or example for making simple RESTful API with  **for exam purposes only** 
+It is a just simple showcase of API Knowledge or example for making a simple RESTful API   **for exam purposes only** 
 Coded with share screen with a Tech Reviewer
 
 ## Installation & Run
@@ -20,15 +20,15 @@ define('DB_DATABASE','db_exam');
 
 ```bash
 # Build and Run
-cd /htdocs/simple-customers/api
+cd /htdocs/simple-customers/
 
-# Sample API Endpoint : http://localhost/img/api.php/customer/list?limit=15
+# Sample API Endpoint : http://localhost/simple-customers-api/api.php/customer/list?limit=15
 ```
 
 ## Structure
 ```
 ├── simple-customers-api
-│   ├── api.php // main file 
+│   ├── api.php // main file for API handler
 │   ├── db.php          // DB Config and connection class
 │   └── ApiController.php     // Our Controller for managing the transactions
 ```
