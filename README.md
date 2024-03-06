@@ -51,11 +51,11 @@ cd /htdocs/simple-customers/api
 * `PATCH` : Update a Customer Record on the database  a task of a project using PATCH Method for single fields
 
 #### /customer/{customerId}
-* `PATCH` : Delete a Customer Record on the database
+* `DELETE` : Delete a Customer Record on the database
 
 ## List of TODO to test the REST API
 
-- [ ] Setup the Database by Importing
+- [ ] Setup the Database by Importing the SQL File
 - [ ] Set the DB Config File Values properly
 - [ ] Open a Database Client in order to view the records
 - [ ] Refer the the API Endpoints to be able to test
