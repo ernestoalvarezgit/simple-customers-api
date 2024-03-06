@@ -36,7 +36,7 @@ cd /htdocs/simple-customers/api
 ## API
 
 #### /customer/list
-* `GET` : Get all projects
+* `GET` : Get all customers
 
 #### /customer/show/{customerId}
 * `GET` : Get a customer record
@@ -45,10 +45,10 @@ cd /htdocs/simple-customers/api
 * `POST` : Insert a Customer Record on the Database
 
 #### /customer/{customerId}
-* `PUT` : Update a Customer Record on the database  a task of a project
+* `PUT` : Update a Customer Record on the database  
 
 #### /customer/{customerId}
-* `PATCH` : Update a Customer Record on the database  a task of a project using PATCH Method for single fields
+* `PATCH` : Update a Customer Record on the database  using PATCH Method for single fields
 
 #### /customer/{customerId}
 * `DELETE` : Delete a Customer Record on the database
