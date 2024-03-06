@@ -1,12 +1,11 @@
 <?php
 
-class ApiController{
+class ApiController extends DatabaseConnection{
 
     public function __construct(){
         $db = new DatabaseConnection;
         $this->conn = $db->conn;
     }
-    
     
     public function get_customer($id){
         try {
@@ -18,8 +17,6 @@ class ApiController{
             $customer = $result->fetch_assoc(); 
 
             return $customer;
-
-
         } catch(Exception $e){
             throw New Exception ( $e->getMessage()); 
         }
@@ -37,7 +34,7 @@ class ApiController{
             else
                 $statement = $this->conn->prepare("SELECT * FROM customers");
 
-                $statement->execute();
+            $statement->execute();
 
             $result = $statement->get_result();
             $customers = $result->fetch_all(MYSQLI_ASSOC); 
@@ -57,14 +54,11 @@ class ApiController{
             $statement->bind_param("sss", $data['customer_name'], $data['customer_address'], $data['customer_contact']);
             
             if($statement->execute()){
-
                 $response['message'] = 'data successfully inserted';
                 $response['status'] = 'Ok';
             } else{
-
                 $response['message'] = 'data not saved';
                 $response['status'] = 'Error';
-
             }
 
             return $response;
@@ -137,8 +131,6 @@ class ApiController{
             throw New Exception ( $e->getMessage()); 
         }
         return false;
-
-
 
     }
 
